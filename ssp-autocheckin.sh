@@ -245,7 +245,7 @@ ssp_autochenkin() {
             username_prefix="${username%%@*}"
             username_suffix="${username#*@}"
             username_root="${username_suffix#*.}"
-            username_text="${username_prefix:0:2}🙈@${username_suffix:0:2}🙈.${username_root}"
+            username_text="${username_prefix:0:2}🙈@🙈.${username_root}"
 
             domain_protocol="${domain%%://*}"
             domain_context="${domain##*//}"
