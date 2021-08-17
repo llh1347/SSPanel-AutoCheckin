@@ -6,7 +6,8 @@ VERSION="2.2.2"
 ENV_PATH="$(dirname $0)/.env"
 IS_MACOS=$(uname | grep 'Darwin' | wc -l)
 IS_DISPLAY_CONTEXT=1
-TITLE="🚀SSPanel 自动签到 v${VERSION}"
+#TITLE="🚀SSPanel 自动签到 v${VERSION}"
+TITLE="【SSPanel自动签到】"
 users_array=""
 log_text=""
 COOKIE_PATH="./.ss-autocheckin.cook"
@@ -262,7 +263,7 @@ ssp_autochenkin() {
             login_code=$(echo ${login} | jq -r '.ret' 2>&1)
             login_status=$(echo ${login} | jq -r '.msg' 2>&1)
 
-            login_log_text="\n用户 ${user_count}\n"
+            #login_log_text="\n用户 ${user_count}\n"
             login_log_text="${login_log_text}签到站点: ${domain_text}\n"
             login_log_text="${login_log_text}签到用户: ${username_text}\n"
             login_log_text="${login_log_text}签到时间: ${start_time}\n"
